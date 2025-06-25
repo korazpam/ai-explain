@@ -1,99 +1,107 @@
 :root {
-    --primary-color: #4f46e5;
-    --primary-hover-color: #4338ca;
-    --primary-light-color: #e0e7ff;
-    --secondary-bg-color: #f3f4f6;
+    /* Color Palette */
+    --primary-color: #5a67d8; /* Indigo */
+    --primary-hover-color: #4c51bf; /* Darker Indigo */
+    --primary-light-color: #ebf4ff; /* Very Light Blue - for subtle backgrounds */
+    --secondary-bg-color: #f7fafc; /* Lighter Gray - for secondary backgrounds */
     --panel-bg-color: #ffffff;
-    --border-color: #e5e7eb;
-    --subtle-border-color: #f3f4f6;
-    --text-color: #1f2937;
-    --secondary-text-color: #6b7280;
-    --placeholder-text-color: #9ca3af;
-    --background-color: #f9fafb;
-    --error-color: #ef4444;
-    --error-text-color: #b91c1c;
-    --error-bg-color: #fee2e2;
-    --success-color: #10b981;
-    --success-text-color: #047857;
-    --success-bg-color: #d1fae5;
+    --border-color: #e2e8f0; /* Light Gray - for borders */
+    --subtle-border-color: #edf2f7; /* Even Lighter Gray */
+    --text-color: #2d3748; /* Dark Gray - for primary text */
+    --secondary-text-color: #718096; /* Medium Gray - for secondary text */
+    --placeholder-text-color: #a0aec0; /* Light Gray - for placeholders */
+    --background-color: #f7fafc; /* Page background */
 
-    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.03);
-    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.07), 0 1px 2px -1px rgb(0 0 0 / 0.04);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --error-color: #e53e3e; /* Red */
+    --error-text-color: #c53030; /* Darker Red */
+    --error-bg-color: #fed7d7; /* Light Red */
+    --success-color: #38a169; /* Green */
+    --success-text-color: #2f855a; /* Darker Green */
+    --success-bg-color: #c6f6d5; /* Light Green */
 
-    --radius-sm: 0.25rem;
-    --radius-md: 0.375rem;
-    --radius-lg: 0.5rem;
-    --transition-speed: 0.2s;
+    /* Shadows - slightly softer */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+
+    /* Radii - slightly more rounded for a softer feel */
+    --radius-sm: 0.3rem;
+    --radius-md: 0.45rem;
+    --radius-lg: 0.6rem;
+
+    /* Transitions */
+    --transition-speed: 0.15s; /* Slightly faster for snappier feel */
     --transition-timing: ease-in-out;
 
-    --actual-header-height: 70px; 
-    --actual-bottom-bar-height: 0px; /* Set to 0 as bottom bar is removed */
-    --settings-panel-width: 320px; 
-    --main-container-effective-top-padding: 1.5rem; 
-    --main-container-side-padding: 1.5rem;
-    --main-container-bottom-gap: 1.5rem; 
-    --panel-header-height: 57px; 
+    /* Layout Dimensions (can be adjusted based on overall design) */
+    --actual-header-height: 64px; /* Adjusted for potentially sleeker header */
+    --settings-panel-width: 300px;
+    --main-container-effective-top-padding: 1.25rem;
+    --main-container-side-padding: 1.25rem;
+    --main-container-bottom-gap: 1.25rem;
+    --panel-header-height: 52px; /* Adjusted for potentially sleeker panel headers */
 
-
+    /* Seek Bar */
     --seek-track-color: var(--border-color);
-    --seek-buffer-color: #cccccc;
+    --seek-buffer-color: #d2d6dc; /* Slightly lighter gray */
     --seek-progress-color: var(--primary-color);
     --seek-thumb-color: var(--primary-color);
     --seek-thumb-hover-color: var(--primary-hover-color);
     --seek-thumb-disabled-color: var(--secondary-text-color);
 
+    /* Scrollbar */
     --scrollbar-track-color: var(--secondary-bg-color);
-    --scrollbar-thumb-color: #c1c1c1;
-    --scrollbar-thumb-hover-color: #a8a8a8;
-    --scrollbar-width-value: 0.5rem; 
-    --scrollbar-border-radius: 0.25rem;
+    --scrollbar-thumb-color: #cbd5e0; /* Adjusted to fit new palette */
+    --scrollbar-thumb-hover-color: #a0aec0; /* Adjusted */
+    --scrollbar-width-value: 0.4rem; /* Slightly thinner scrollbar */
+    --scrollbar-border-radius: 0.2rem;
 }
 
 html {
-    font-size: 75%; 
+    font-size: 100%; /* Use browser default, then scale with rem units */
+    -webkit-text-size-adjust: 100%; /* Prevent iOS text scaling */
 }
 
 body.dark-mode {
-    --primary-color: #6366f1; 
-    --primary-hover-color: #4f46e5;
-    --primary-light-color: rgba(99, 102, 241, 0.2); 
+    --primary-color: #7f9cf5; /* Lighter Indigo for dark mode */
+    --primary-hover-color: #667eea; /* Slightly lighter hover */
+    --primary-light-color: rgba(127, 156, 245, 0.15);
 
-    --secondary-bg-color: #374151; 
-    --panel-bg-color: #1f2937;    
-    --border-color: #4b5563;      
-    --subtle-border-color: #374151;
+    --secondary-bg-color: #2d3748; /* Dark Gray */
+    --panel-bg-color: #1a202c;    /* Very Dark Gray/Almost Black */
+    --border-color: #4a5568;      /* Medium Gray for borders in dark mode */
+    --subtle-border-color: #2d3748;
 
-    --text-color: #f3f4f6;            
-    --secondary-text-color: #9ca3af;   
-    --placeholder-text-color: #6b7280; 
+    --text-color: #e2e8f0;            /* Light Gray for text */
+    --secondary-text-color: #a0aec0;   /* Medium-Light Gray */
+    --placeholder-text-color: #718096;
 
-    --background-color: #111827;      
+    --background-color: #171923;      /* Darker Page Background */
 
-    --error-color: #f87171;           
-    --error-text-color: #fecaca;
-    --error-bg-color: rgba(239, 68, 68, 0.15); 
+    --error-color: #fc8181;           /* Lighter Red */
+    --error-text-color: #fbb6b6;      /* Even Lighter Red */
+    --error-bg-color: rgba(252, 129, 129, 0.1);
 
-    --success-color: #4ade80;         
-    --success-text-color: #a7f3d0;
-    --success-bg-color: rgba(16, 185, 129, 0.15); 
+    --success-color: #68d391;         /* Lighter Green */
+    --success-text-color: #b2f5ea;    /* Even Lighter Green */
+    --success-bg-color: rgba(104, 211, 145, 0.1);
 
-    --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05); 
-    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.06);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.15), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.15);
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.15), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
 
-    --seek-track-color: var(--subtle-border-color);
-    --seek-buffer-color: #555555;
+    --seek-track-color: var(--border-color);
+    --seek-buffer-color: #4a5568;
     --seek-progress-color: var(--primary-color);
     --seek-thumb-color: var(--primary-color);
     --seek-thumb-hover-color: var(--primary-hover-color);
     --seek-thumb-disabled-color: var(--secondary-text-color);
 
     --scrollbar-track-color: var(--secondary-bg-color); 
-    --scrollbar-thumb-color: #6b7280; 
-    --scrollbar-thumb-hover-color: #9ca3af; 
+    --scrollbar-thumb-color: #4a5568;
+    --scrollbar-thumb-hover-color: #718096;
 }
 
 
@@ -101,7 +109,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+    font-size: 0.875rem; /* Base font size for the body (14px if html font-size is 16px) */
+    line-height: 1.65; /* Improved line height for readability */
     color: var(--text-color);
     background-color: var(--background-color);
     display: flex;
@@ -176,26 +185,27 @@ body::-webkit-scrollbar-thumb:hover,
     /* Base styling is inherited from .icon-button-header class */
 }
 
-
+/* === Header === */
 header {
     background-color: var(--panel-bg-color);
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1.25rem; /* Slightly reduced padding for a tighter look */
     border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens if necessary */
+    gap: 1rem; /* Spacing between logo area and controls area */
     z-index: 900; 
     box-shadow: var(--shadow-sm);
     position: sticky; 
     top: 0;
+    height: var(--actual-header-height); /* Use variable for height */
+    box-sizing: border-box; /* Include padding and border in height */
     transition: background-color var(--transition-speed) var(--transition-timing), 
                 border-color var(--transition-speed) var(--transition-timing),
-                max-height 0.3s ease-in-out,
+                max-height 0.3s ease-in-out, /* Keep collapse transitions */
                 padding-top 0.3s ease-in-out,
                 padding-bottom 0.3s ease-in-out,
-                border-bottom-width 0.3s ease-in-out,
                 opacity 0.3s ease-in-out;
 }
 
@@ -203,130 +213,168 @@ header.collapsed {
     max-height: 0;
     padding-top: 0;
     padding-bottom: 0;
-    border-bottom-width: 0;
+    border-bottom: none; /* Remove border when collapsed */
     opacity: 0;
     overflow: hidden;
     pointer-events: none; 
 }
 
-
 header h1 {
     margin: 0;
-    font-size: 1.3em;
+    font-size: 1.125rem; /* 18px, slightly smaller for a modern feel */
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.5rem; /* Slightly reduced gap */
     color: var(--text-color);
 }
 
-header h1 svg#appLogoSettingsToggle {
+header h1 svg#appLogoSettingsToggle { /* This is the settings toggle icon */
     color: var(--primary-color);
-    width: 1.75rem; 
-    height: 1.75rem; 
+    width: 1.5rem; /* 24px, adjusted for visual balance */
+    height: 1.5rem; /* 24px */
     transition: color var(--transition-speed) var(--transition-timing), transform 0.1s ease-out;
     cursor: pointer;
     border-radius: var(--radius-sm);
+    padding: 0.25rem; /* Add a little padding to make the click target larger */
+    box-sizing: content-box; /* Ensure padding doesn't increase overall size unexpectedly */
 }
 header h1 svg#appLogoSettingsToggle:hover {
-    transform: scale(1.1);
+    background-color: var(--primary-light-color); /* Subtle hover background */
+    transform: scale(1.05); /* Slightly less aggressive scale */
+}
+body.dark-mode header h1 svg#appLogoSettingsToggle:hover {
+    background-color: rgba(255,255,255,0.1);
 }
 header h1 svg#appLogoSettingsToggle:focus-visible {
     outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+    outline-offset: 1px; /* Closer outline */
+    background-color: var(--primary-light-color);
+}
+body.dark-mode header h1 svg#appLogoSettingsToggle:focus-visible {
+    background-color: rgba(255,255,255,0.1);
 }
 header h1 svg#appLogoSettingsToggle.disabled {
     opacity: 0.5;
     cursor: not-allowed;
     transform: none;
+    background-color: transparent;
 }
 header h1 svg#appLogoSettingsToggle.disabled:hover {
-    transform: none; /* No hover effect when disabled */
+    transform: none;
+    background-color: transparent;
 }
-
 
 .header-controls {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.65rem; /* Slightly reduced gap for tighter grouping */
     margin-left: auto; /* Push controls to the right if header h1 is present */
 }
 
-/* Consolidated button styles */
-.button, .icon-button-header, .icon-button { 
+/* === Button System === */
+
+/* Base Button Style (invisible, used for extension) */
+.btn-base {
     display: inline-flex;
     align-items: center;
-    justify-content: center; 
-    gap: 0.5rem;
-    padding: 0.7rem 1.3rem; 
+    justify-content: center;
+    gap: 0.5rem; /* Space between icon and text */
     border-radius: var(--radius-md);
-    border: 1px solid transparent; 
+    border: 1px solid transparent;
     cursor: pointer;
-    font-size: 0.9em;
+    font-family: inherit; /* Ensure font consistency */
+    font-size: 0.875rem; /* 14px */
     font-weight: 500;
     transition: all var(--transition-speed) var(--transition-timing);
     box-shadow: var(--shadow-sm);
     user-select: none;
-    text-decoration: none; 
+    text-decoration: none;
+    line-height: 1.5; /* Ensure text is vertically centered */
 }
-.button { 
+.btn-base svg {
+    width: 1.125rem; /* 18px */
+    height: 1.125rem; /* 18px */
+}
+.btn-base:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px var(--primary-light-color);
+}
+body.dark-mode .btn-base:focus-visible {
+    box-shadow: 0 0 0 3px var(--primary-light-color);
+}
+.btn-base:disabled {
+    opacity: 0.55; /* Slightly more visible disabled state */
+    cursor: not-allowed;
+    transform: translateY(0); /* No transform on disabled */
+    box-shadow: none; /* No shadow on disabled */
+}
+
+/* Primary Button (e.g., .button class in HTML) */
+.button {
+    composes: btn-base; /* Inherit from btn-base */
+    padding: 0.6rem 1.2rem; /* Adjusted padding */
     background-color: var(--primary-color);
     color: white;
     border-color: var(--primary-color);
 }
-.button svg { 
-    width: 1.25rem; 
-    height: 1.25rem; 
-}
-
 .button:hover:not(:disabled) {
      background-color: var(--primary-hover-color);
      border-color: var(--primary-hover-color);
      box-shadow: var(--shadow-md);
-     transform: translateY(-1px); 
+     transform: translateY(-1px);
 }
 .button:active:not(:disabled) {
-    transform: translateY(0);
+    transform: translateY(0); /* Reset transform on active */
     box-shadow: var(--shadow-xs);
+    background-color: var(--primary-hover-color); /* Keep hover color for active */
 }
 .button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    transform: translateY(0);
-    box-shadow: var(--shadow-xs);
-    background-color: var(--secondary-text-color);
+    /* Specific disabled styles for primary button if needed, or rely on .btn-base:disabled */
+    background-color: var(--secondary-text-color); /* Example: gray background when disabled */
     border-color: var(--secondary-text-color);
+    color: var(--panel-bg-color); /* Ensure text is visible on gray */
 }
 
-.icon-button-header, .icon-button { 
-    padding: 0.7rem; 
+/* Secondary/Icon Button (e.g., .icon-button, .icon-button-header in HTML) */
+.icon-button, .icon-button-header {
+    composes: btn-base;
+    padding: 0.6rem; /* Square padding for icon buttons */
     background-color: var(--secondary-bg-color);
     color: var(--secondary-text-color);
     border: 1px solid var(--border-color);
 }
-.icon-button-header:hover:not(:disabled), .icon-button:hover:not(:disabled) {
+.icon-button:hover:not(:disabled),
+.icon-button-header:hover:not(:disabled) {
     background-color: var(--primary-light-color);
     border-color: var(--primary-color);
     color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
 }
-body.dark-mode .icon-button-header:hover:not(:disabled), body.dark-mode .icon-button:hover:not(:disabled) {
-    background-color: var(--primary-color);
+body.dark-mode .icon-button:hover:not(:disabled),
+body.dark-mode .icon-button-header:hover:not(:disabled) {
+    background-color: var(--primary-color); /* Use primary color for dark mode hover */
     border-color: var(--primary-hover-color);
     color: white;
 }
-.icon-button-header svg, .icon-button svg { 
-    width: 1.25rem; 
-    height: 1.25rem; 
-}
-.icon-button.active { 
+.icon-button.active,
+.icon-button-header.active { /* For toggled states */
     background-color: var(--primary-color);
     color: white;
     border-color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
 }
-body.dark-mode .icon-button.active {
-    background-color: var(--primary-hover-color);
+body.dark-mode .icon-button.active,
+body.dark-mode .icon-button-header.active {
+    background-color: var(--primary-hover-color); /* Darker active for dark mode */
     color: white;
     border-color: var(--primary-hover-color);
+}
+.icon-button:disabled, .icon-button-header:disabled {
+    background-color: var(--secondary-bg-color);
+    border-color: var(--border-color);
+    color: var(--placeholder-text-color); /* More muted for icon buttons */
 }
 
 
@@ -335,14 +383,15 @@ body.dark-mode .icon-button.active {
 }
 
 #fileNameDisplay {
-    font-size: 0.9em;
+    font-size: 0.875rem; /* Consistent with button font size */
     color: var(--secondary-text-color);
     background-color: var(--secondary-bg-color);
-    padding: 0.7rem 0.95rem; 
+    padding: 0.6rem 1rem; /* Align padding with buttons */
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
     box-shadow: var(--shadow-xs);
     transition: background-color var(--transition-speed) var(--transition-timing), color var(--transition-speed) var(--transition-timing), border-color var(--transition-speed) var(--transition-timing);
+    line-height: 1.5; /* Consistent line height */
 }
 
 main.app-container {
@@ -395,97 +444,106 @@ body:not(.dark-mode) #explanationArea:hover {
     border-color: var(--primary-color); 
 }
 
+/* === Panel Headers === */
 .panel-header {
-    padding: 0.85rem 1.25rem;
-    font-size: 1.05em;
-    font-weight: 600;
+    padding: 0.75rem 1.125rem; /* Adjusted padding */
+    font-size: 1rem; /* Slightly reduced font size for a cleaner look */
+    font-weight: 600; /* Keep font weight */
     border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem; /* Adjusted gap */
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Keep wrap for responsiveness */
     flex-shrink: 0;
-    background-color: var(--panel-bg-color);
+    background-color: var(--panel-bg-color); /* Keep panel background */
     color: var(--text-color);
-    transition: background-color var(--transition-speed) var(--transition-timing), border-color var(--transition-speed) var(--transition-timing), color var(--transition-speed) var(--transition-timing);
+    min-height: var(--panel-header-height); /* Use variable for min-height */
+    box-sizing: border-box; /* Include padding and border in height calculation */
+    transition: background-color var(--transition-speed) var(--transition-timing),
+                border-color var(--transition-speed) var(--transition-timing),
+                color var(--transition-speed) var(--transition-timing);
 }
 
 .panel-header-title {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    flex-shrink: 0;
+    gap: 0.4rem; /* Slightly reduced gap */
+    flex-shrink: 0; /* Prevent title from shrinking too much */
+    margin-right: auto; /* Push controls to the far right by default */
 }
 
 .panel-header-title svg {
-    color: var(--secondary-text-color);
-    width: 1.25rem; 
-    height: 1.25rem; 
+    color: var(--secondary-text-color); /* Keep color */
+    width: 1.125rem; /* 18px - Standardized icon size */
+    height: 1.125rem; /* 18px */
     transition: color var(--transition-speed) var(--transition-timing);
 }
 
+/* Panel controls adjustments were mostly done in Step 4 & 5.
+   This ensures the .panel-controls div itself behaves well within the header. */
 .panel-controls {
     display: flex;
     align-items: center;
     gap: 0.65rem;
     flex-wrap: wrap;
+    /* Ensure panel controls are aligned to the right, even if panel title wraps */
+    margin-left: auto;
 }
 
-.panel-controls button { 
-    padding: 0.5rem 0.9rem; 
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    background-color: var(--panel-bg-color); 
-    cursor: pointer;
-    font-size: 0.85em;
-    font-weight: 500;
-    transition: all var(--transition-speed) var(--transition-timing);
-    box-shadow: var(--shadow-xs);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: var(--text-color);
+/* Buttons within .panel-controls (e.g., Prev/Next, Zoom buttons, Fullscreen) */
+.panel-controls button {
+    composes: icon-button; /* All panel control buttons are icon/secondary style */
+    padding: 0.5rem 0.8rem; /* Slightly adjusted padding */
+    font-size: 0.8125rem; /* 13px, slightly smaller for controls */
+    gap: 0.35rem; /* Adjust gap for smaller text/icons if needed */
 }
-.panel-controls button svg { 
-    width: 1rem; 
-    height: 1rem; 
+.panel-controls button svg {
+    width: 0.9375rem; /* 15px, slightly smaller icons in panel controls */
+    height: 0.9375rem;
 }
+/* Specific hover/active/disabled states are inherited from .icon-button */
 
-
-.panel-controls button:hover:not(:disabled) {
-    background-color: var(--secondary-bg-color);
-    border-color: #d1d5db; 
-    box-shadow: var(--shadow-sm);
-    color: var(--primary-color); 
-}
-body.dark-mode .panel-controls button:hover:not(:disabled) {
-    background-color: var(--subtle-border-color);
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-}
-
-
-.panel-controls button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    box-shadow: none;
-    background-color: var(--secondary-bg-color);
-    color: var(--secondary-text-color);
-}
-
+/* Slide Counter Input */
 .slide-counter-input {
-    background-color: var(--secondary-bg-color);
-    color: var(--secondary-text-color);
-    cursor: text; 
-    padding: 0.55rem 0.8rem; 
-    width: 5.3125rem; 
+    /* Use similar styling to other inputs but adapt for panel context */
+    padding: 0.5rem 0.7rem; /* Match button vertical padding */
+    width: auto; /* Allow it to size based on content + min-width */
+    min-width: 4.5em; /* Ensure enough space for "00 / 00" */
     text-align: center;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    font-size: 0.85em;
+    font-size: 0.8125rem; /* Match panel control buttons */
+    background-color: var(--background-color);
+    color: var(--secondary-text-color);
     box-shadow: var(--shadow-xs);
+    line-height: 1.5; /* Consistent line height */
     -moz-appearance: textfield;
+    transition: border-color var(--transition-speed) var(--transition-timing),
+                box-shadow var(--transition-speed) var(--transition-timing),
+                background-color var(--transition-speed) var(--transition-timing);
+}
+.slide-counter-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-light-color);
+    background-color: var(--panel-bg-color);
+    color: var(--text-color);
+}
+.slide-counter-input:disabled {
+    background-color: var(--secondary-bg-color);
+    color: var(--placeholder-text-color);
+    cursor: not-allowed;
+    opacity: 0.7; /* Slightly more visible than default button disabled */
+}
+body.dark-mode .slide-counter-input {
+    background-color: var(--secondary-bg-color);
+}
+body.dark-mode .slide-counter-input:focus {
+    background-color: var(--subtle-border-color);
+}
+body.dark-mode .slide-counter-input:disabled {
+    background-color: var(--subtle-border-color); /* Darker disabled for dark mode */
 }
 .slide-counter-input::-webkit-outer-spin-button,
 .slide-counter-input::-webkit-inner-spin-button {
@@ -493,131 +551,126 @@ body.dark-mode .panel-controls button:hover:not(:disabled) {
     margin: 0;
 }
 
+/* Zoom Controls Group */
 .zoom-controls-group {
     display: flex;
     align-items: center; 
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    overflow: hidden; 
+    overflow: hidden; /* Important for grouped button effect */
     box-shadow: var(--shadow-xs);
-    background-color: var(--panel-bg-color); 
+    /* background-color: var(--panel-bg-color); Removed, buttons will provide bg */
 }
 
-.zoom-controls-group button,
-.zoom-controls-group .zoom-display {
-    padding: 0.5rem 0.8rem; 
-    border: none; 
-    border-radius: 0; 
-    background-color: transparent; 
-    box-shadow: none; 
-    font-size: 0.85em;
-    color: var(--text-color);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center; 
-    height: 100%; 
-    line-height: 1; 
+.zoom-controls-group button {
+    composes: panel-controls button; /* Inherit from panel control buttons */
+    border-radius: 0; /* Remove individual radius */
+    border: none; /* Remove individual borders */
+    border-left: 1px solid var(--border-color); /* Separator line */
+    box-shadow: none; /* Remove individual shadows */
+    padding: 0.5rem 0.7rem; /* Consistent padding */
 }
-.zoom-controls-group button svg { 
-    width: 1rem; 
-    height: 1rem;
+.zoom-controls-group button:first-child {
+    border-left: none; /* No left border for the first button */
+    border-top-left-radius: var(--radius-md); /* Round top-left corner */
+    border-bottom-left-radius: var(--radius-md); /* Round bottom-left corner */
 }
-
-
-.zoom-controls-group button:not(:first-child),
-.zoom-controls-group .zoom-display:not(:first-child) {
-    border-left: 1px solid var(--border-color);
+.zoom-controls-group button:last-child {
+    border-top-right-radius: var(--radius-md); /* Round top-right corner */
+    border-bottom-right-radius: var(--radius-md); /* Round bottom-right corner */
 }
-
-.zoom-controls-group button { cursor: pointer; transition: background-color var(--transition-speed) var(--transition-timing); }
-.zoom-controls-group button:hover:not(:disabled) { background-color: var(--secondary-bg-color); }
-body.dark-mode .zoom-controls-group button:hover:not(:disabled) { background-color: var(--subtle-border-color); }
-.zoom-controls-group button:disabled { opacity: 0.6; cursor: not-allowed; background-color: transparent; color: var(--secondary-text-color); }
+/* Hover/active states are inherited from .panel-controls button -> .icon-button */
 
 .zoom-controls-group .zoom-display {
+    padding: 0.5rem 0.7rem; /* Match button padding */
+    font-size: 0.8125rem; /* Match panel control buttons */
     color: var(--secondary-text-color);
     font-weight: 500;
-    min-width: 3.75rem; 
+    min-width: 3em; /* Enough for "100%" */
     text-align: center;
     cursor: default;
     background-color: var(--secondary-bg-color); 
+    border-left: 1px solid var(--border-color);
+    line-height: 1.5;
 }
-body.dark-mode .zoom-controls-group .zoom-display { background-color: var(--subtle-border-color); }
+body.dark-mode .zoom-controls-group .zoom-display {
+    background-color: var(--subtle-border-color);
+}
 
+/* Fullscreen buttons already use .icon-button, should be fine */
 
+/* Action Button Group (Snip, Explain, Lecture, etc.) */
 .action-button-group {
-    display: flex;
+    display: inline-flex; /* Changed from flex to inline-flex to allow other controls on the same line if space permits */
     align-items: center;
-    box-shadow: var(--shadow-sm);
-    flex-wrap: nowrap; 
+    box-shadow: var(--shadow-sm); /* Keep shadow for the group */
+    border-radius: var(--radius-md); /* Apply radius to the group */
+    overflow: hidden; /* Clip corners of internal buttons */
 }
 
 .action-button-group button {
-    padding: 0.55rem 1.05rem; 
-    border: 1px solid var(--primary-color);
-    background-color: var(--primary-color);
-    color: white;
-    cursor: pointer;
-    font-size: 0.85em;
-    font-weight: 500;
-    transition: all var(--transition-speed) var(--transition-timing);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    border-radius: 0; 
+    composes: button; /* Inherit from primary button style */
+    padding: 0.5rem 0.9rem; /* Adjusted padding */
+    font-size: 0.8125rem; /* 13px, match panel controls */
+    gap: 0.4rem; /* Keep specific gap */
+    border-radius: 0; /* Individual buttons are square within the group */
+    border: none; /* Remove individual borders */
+    border-right: 1px solid var(--primary-hover-color); /* Separator, darker shade of primary */
+    box-shadow: none; /* Remove individual shadows, group has one */
 }
+body.dark-mode .action-button-group button {
+    border-right-color: var(--primary-color); /* Slightly lighter separator for dark mode */
+}
+
+.action-button-group button:last-child,
+.action-button-group button.is-effective-last-in-pair:not(.hidden) {
+    border-right: none; /* No right border for the last visible button */
+}
+
+/* Ensure first and last visible buttons in group get rounded corners from the parent */
+/* This is tricky with dynamic .hidden class. Simpler to have parent .action-button-group handle border-radius. */
+
 .action-button-group button svg {
-    width: 1rem; 
-    height: 1rem; 
+    width: 0.9375rem; /* 15px, match panel controls */
+    height: 0.9375rem;
 }
 
-.action-button-group button:not(:last-child):not(.hidden) { border-right-width: 0; }
-.action-button-group button:first-of-type:not(.hidden),
-.action-button-group button#snipExplainBtn:not(.hidden) { 
-    border-top-left-radius: var(--radius-md);
-    border-bottom-left-radius: var(--radius-md);
-}
-.action-button-group button:last-of-type:not(.hidden),
-.action-button-group button#genAudioBtn.is-effective-last-in-pair:not(.hidden),
-.action-button-group button#stopAudioBtn.is-effective-last-in-pair:not(.hidden) {
-    border-top-right-radius: var(--radius-md);
-    border-bottom-right-radius: var(--radius-md);
-    border-right-width: 1px; 
-}
-.action-button-group button.hidden + button:not(.hidden) { border-left-width: 1px; }
-
+/* Active state for Snip button */
 .action-button-group button#snipExplainBtn.active {
-    background-color: var(--primary-hover-color);
-    border-color: var(--primary-color); 
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    background-color: var(--primary-hover-color); /* Darken to show it's active */
+    /* border-color: var(--primary-color); /* Border is on the group or separators */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.15); /* Inner shadow for active state */
 }
 body.dark-mode .action-button-group button#snipExplainBtn.active {
-    background-color: var(--primary-color);
-    border-color: var(--primary-hover-color);
+    background-color: var(--primary-color); /* Slightly lighter active for dark mode */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.25);
 }
 
-.action-button-group button:hover:not(:disabled) {
-    background-color: var(--primary-hover-color);
-    border-color: var(--primary-hover-color);
-}
- .action-button-group button#stopAudioBtn {
+/* Hover states are inherited from .button */
+
+/* Stop Audio Button - specific styling */
+.action-button-group button#stopAudioBtn {
     background-color: var(--error-color);
-    border-color: var(--error-color);
+    /* border-color: var(--error-color); /* Border is on group/separators */
 }
 .action-button-group button#stopAudioBtn:hover:not(:disabled) {
-    background-color: #c82333; 
-    border-color: #c82333;
+    background-color: #c53030; /* Darker red for hover (error-text-color from light mode) */
+    /* border-color: #c53030; */
 }
 body.dark-mode .action-button-group button#stopAudioBtn {
-    background-color: var(--error-color);
-    border-color: var(--error-color);
+    background-color: var(--error-color); /* Lighter red for dark mode */
 }
 body.dark-mode .action-button-group button#stopAudioBtn:hover:not(:disabled) {
-    background-color: #ef4444; 
-    border-color: #ef4444;
+    background-color: #fc8181; /* Even Lighter red for dark mode hover */
+    /* color: #1a202c; /* Ensure contrast for text on light red */
 }
- .action-button-group button:disabled { opacity: 0.6; cursor: not-allowed; }
 
+/* Disabled state is inherited from .button -> .btn-base */
+
+/* Other icon buttons in this panel (#autoSlideshowToggleBtn, #copyBtn)
+   should automatically use the updated .icon-button style from global changes.
+   Their specific SVG sizes are already set in HTML, which is fine.
+*/
 
 .panel-content {
     padding: 1.5rem;
@@ -761,11 +814,16 @@ body.dark-mode .explanation-content-inner tbody tr:hover { background-color: rgb
 .settings-panel:not(.collapsed) {
     transform: translateX(0);
 }
-.settings-panel-header { 
+
+/* Settings Panel Header (inherits .panel-header, specific adjustments if any) */
+.settings-panel-header {
     flex-shrink: 0;
+    /* Ensure its height is consistent with var(--panel-header-height) if needed,
+       but .panel-header already defines padding. */
 }
+
 .settings-panel-content {
-    padding: 1.5rem;
+    padding: 1.25rem; /* Slightly reduced padding */
     overflow-y: auto;
     flex-grow: 1;
 }
@@ -773,110 +831,112 @@ body.dark-mode .explanation-content-inner tbody tr:hover { background-color: rgb
 .config-inputs { 
     display: grid;
     grid-template-columns: 1fr; 
-    gap: 1.25rem;
+    gap: 1rem; /* Reduced gap between input groups */
 }
 
-.config-inputs input, .config-inputs select {
+/* Styling for input fields and select dropdowns in settings */
+.config-inputs input,
+.config-inputs select {
     width: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.6rem 0.9rem; /* Adjusted padding for a sleeker look */
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
-    font-size: 0.95em;
+    font-size: 0.875rem; /* Consistent font size */
     box-sizing: border-box;
-    background-color: var(--panel-bg-color); 
+    background-color: var(--background-color); /* Use main background for inputs */
     color: var(--text-color);
-    transition: border-color var(--transition-speed) var(--transition-timing), box-shadow var(--transition-speed) var(--transition-timing), background-color var(--transition-speed) var(--transition-timing), color var(--transition-speed) var(--transition-timing);
+    transition: border-color var(--transition-speed) var(--transition-timing),
+                box-shadow var(--transition-speed) var(--transition-timing),
+                background-color var(--transition-speed) var(--transition-timing),
+                color var(--transition-speed) var(--transition-timing);
     box-shadow: var(--shadow-xs);
 }
-body.dark-mode .config-inputs input, body.dark-mode .config-inputs select {
-    background-color: var(--secondary-bg-color); 
+body.dark-mode .config-inputs input,
+body.dark-mode .config-inputs select {
+    background-color: var(--secondary-bg-color); /* Darker inputs for dark mode */
+    border-color: var(--border-color); /* Ensure border is visible */
 }
 
-.config-inputs input:focus, .config-inputs select:focus {
+.config-inputs input:focus,
+.config-inputs select:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px var(--primary-light-color); 
+    box-shadow: 0 0 0 2px var(--primary-light-color); /* Slightly thinner focus ring */
+    background-color: var(--panel-bg-color); /* Match panel background on focus */
 }
-body.dark-mode .config-inputs input:focus, body.dark-mode .config-inputs select:focus {
-     background-color: var(--secondary-bg-color);
+body.dark-mode .config-inputs input:focus,
+body.dark-mode .config-inputs select:focus {
+     background-color: var(--subtle-border-color); /* Slightly lighter on focus in dark */
 }
-.config-inputs input::placeholder { color: var(--placeholder-text-color); opacity: 0.8; transition: color var(--transition-speed) var(--transition-timing); }
+.config-inputs input::placeholder {
+    color: var(--placeholder-text-color);
+    opacity: 1; /* Ensure placeholder is fully visible */
+    transition: color var(--transition-speed) var(--transition-timing);
+}
 
+/* Grouping of settings */
 .config-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.4rem; /* Reduced gap within a group */
+    padding-bottom: 0.75rem; /* Add some space below each group */
+    /* Consider adding a border-top for visual separation if many groups:
+    border-top: 1px solid var(--subtle-border-color);
+    padding-top: 0.75rem; */
 }
+/* .config-group:first-child { border-top: none; padding-top: 0; } */
+
 .config-label {
-    font-size: 0.9em;
+    font-size: 0.8125rem; /* 13px, slightly smaller label */
     font-weight: 500;
     color: var(--secondary-text-color);
 }
 .font-size-controls {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.5rem; /* Keep this gap for internal elements */
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    padding: 0.25rem;
-    background-color: var(--panel-bg-color); /* Match inputs */
+    padding: 0.3rem; /* Slightly increased padding for better spacing */
+    background-color: var(--background-color); /* Use main background color */
 }
-body.dark-mode .font-size-controls { background-color: var(--secondary-bg-color); }
+body.dark-mode .font-size-controls {
+    background-color: var(--secondary-bg-color); /* Darker for dark mode */
+}
 
 .font-size-controls .font-control-button {
-    padding: 0.5rem 0.75rem; /* Slightly smaller for icon buttons */
-    font-size: 1em; /* Make them a bit bigger for +/- */
-    font-weight: bold;
-    line-height: 1;
-    min-width: 2.5rem; /* Ensure buttons have some width */
-    background-color: var(--secondary-bg-color);
-    color: var(--secondary-text-color);
-    border: 1px solid var(--border-color);
+    composes: icon-button; /* Inherit from icon-button for consistency */
+    padding: 0.4rem 0.6rem; /* Fine-tune padding */
+    font-size: 0.9rem; /* Adjust font size for +/- */
+    font-weight: 600; /* Bolder */
+    min-width: 2.25rem; /* Adjust min-width */
+    /* background-color, color, border will be inherited from .icon-button */
 }
-body.dark-mode .font-size-controls .font-control-button {
-    background-color: var(--subtle-border-color);
-    color: var(--text-color);
-    border-color: var(--border-color);
-}
-.font-size-controls .font-control-button:hover:not(:disabled) {
-    background-color: var(--primary-light-color);
-    color: var(--primary-color);
-}
-body.dark-mode .font-size-controls .font-control-button:hover:not(:disabled) {
-    background-color: var(--primary-color);
-    color: white;
-}
+
 .font-size-controls #fontSizeDisplay {
     flex-grow: 1;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.875rem; /* Consistent font size */
     font-weight: 500;
     color: var(--text-color);
-    padding: 0 0.5rem;
+    padding: 0 0.5rem; /* Keep horizontal padding */
+    min-width: 3em; /* Ensure it has some base width */
+    line-height: 1.5; /* Consistent line height */
 }
+
+/* Theme Toggle Button in Settings */
 .theme-toggle-button {
+    composes: button; /* Inherit from primary button style */
     width: 100%;
-    padding: 0.75rem 1rem; /* Match other inputs */
-    background-color: var(--secondary-bg-color);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    justify-content: center;
+    padding: 0.6rem 1rem; /* Match other primary buttons */
+    /* background-color, color, border will be inherited */
+    justify-content: center; /* Ensure content is centered */
 }
-.theme-toggle-button:hover:not(:disabled) {
-    background-color: var(--primary-light-color);
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+.theme-toggle-button svg {
+    /* SVG size already defined in .btn-base, inherited by .button */
+    /* width: 1.125rem; height: 1.125rem; */
 }
-body.dark-mode .theme-toggle-button {
-    background-color: var(--subtle-border-color);
-    color: var(--text-color);
-    border-color: var(--border-color);
-}
-body.dark-mode .theme-toggle-button:hover:not(:disabled) {
-    background-color: var(--primary-color);
-    color: white;
-}
-.theme-toggle-button svg { width: 1.125rem; height: 1.125rem; }
+/* Hover/active states are inherited from .button */
 
 
 /* Custom Audio Player */
@@ -894,79 +954,239 @@ body.dark-mode .theme-toggle-button:hover:not(:disabled) {
     flex-shrink: 0; 
     transition: transform 0.3s ease-in-out, background-color var(--transition-speed) var(--transition-timing), border-color var(--transition-speed) var(--transition-timing);
 }
-body.dark-mode .custom-audio-player { background-color: var(--panel-bg-color); border-color: var(--subtle-border-color); }
+body.dark-mode .custom-audio-player {
+    background-color: var(--subtle-border-color); /* Slightly different from panel-bg for depth */
+    border-color: var(--border-color);
+}
 .custom-audio-player.hidden { display: none !important; }
 
+/* Fullscreen Audio Player Styles */
 body.viewer-fullscreen-mode .custom-audio-player {
     position: fixed;
     bottom: 0; 
     left: 50%;
-    transform: translate(-50%, 100%); 
-    width: auto;
-    max-width: 600px; 
+    transform: translate(-50%, 100%); /* Start off-screen */
+    width: auto; /* Fit content */
+    max-width: min(calc(100vw - 2rem), 600px); /* Responsive max width */
     margin: 0 auto 1rem auto;
     z-index: 2001; 
-    background-color: rgba(0,0,0,0.75); 
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(31, 41, 55, 0.85); /* Darker, slightly transparent for dark mode */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(75, 85, 99, 0.6); /* Dark mode border */
     box-shadow: var(--shadow-lg);
-    border-radius: var(--radius-lg);
-    padding: 0.75rem 1.25rem; 
+    border-radius: var(--radius-lg); /* Consistent large radius */
+    padding: 0.6rem 1rem; /* Adjusted padding */
 }
-body.dark-mode.viewer-fullscreen-mode .custom-audio-player { background-color: rgba(31, 41, 55, 0.85); border: 1px solid rgba(75, 85, 99, 0.5); }
-body.viewer-fullscreen-mode .custom-audio-player.fullscreen-audio-expanded { transform: translate(-50%, 0); }
+body.dark-mode.viewer-fullscreen-mode .custom-audio-player {
+    /* Dark mode already covered by the base fullscreen styles, but can be adjusted if needed */
+}
+body.viewer-fullscreen-mode .custom-audio-player.fullscreen-audio-expanded {
+    transform: translate(-50%, 0); /* Slide in */
+}
+
+/* Text and icon colors for fullscreen player */
 body.viewer-fullscreen-mode .custom-audio-player,
 body.viewer-fullscreen-mode .custom-audio-player .player-button,
 body.viewer-fullscreen-mode .custom-audio-player .time-display,
 body.viewer-fullscreen-mode .custom-audio-player .player-status-message,
-body.viewer-fullscreen-mode .custom-audio-player .speed-select { color: #f0f0f0; }
-body.viewer-fullscreen-mode .custom-audio-player .player-button:hover:not(:disabled) { background-color: rgba(255,255,255,0.15); }
-body.viewer-fullscreen-mode .custom-audio-player .speed-select { background-color: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.2); }
-body.viewer-fullscreen-mode .custom-audio-player #customSeekBar::-webkit-slider-thumb { background: #e0e0e0; }
-body.viewer-fullscreen-mode .custom-audio-player #customSeekBar::-moz-range-thumb { background: #e0e0e0; }
-body.viewer-fullscreen-mode .custom-audio-player .seek-track { background-color: rgba(255,255,255,0.3); }
-body.viewer-fullscreen-mode .custom-audio-player .seek-buffer-progress { background-color: rgba(255,255,255,0.5); }
-body.viewer-fullscreen-mode .custom-audio-player .seek-played-progress { background-color: var(--primary-color); } 
-body.viewer-fullscreen-mode .custom-audio-player .volume-slider { background: rgba(255,255,255,0.3); }
-body.viewer-fullscreen-mode .custom-audio-player .volume-slider::-webkit-slider-thumb { background: #e0e0e0; }
-body.viewer-fullscreen-mode .custom-audio-player .volume-slider::-moz-range-thumb { background: #e0e0e0; }
+body.viewer-fullscreen-mode .custom-audio-player .speed-select {
+    color: #e2e8f0; /* Light gray text for contrast on dark bg */
+}
+body.viewer-fullscreen-mode .custom-audio-player .player-button:hover:not(:disabled) {
+    background-color: rgba(255,255,255,0.1); /* Lighter hover for buttons */
+}
+body.viewer-fullscreen-mode .custom-audio-player .speed-select {
+    background-color: rgba(0,0,0,0.2);
+    border-color: rgba(255,255,255,0.15);
+}
+body.viewer-fullscreen-mode .custom-audio-player .speed-select option {
+    background-color: var(--panel-bg-color); /* Or a dark color for dropdown options */
+    color: var(--text-color);
+}
 
-.player-button { background: none; border: none; color: var(--text-color); cursor: pointer; padding: 0.3rem; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius-sm); transition: background-color var(--transition-speed) var(--transition-timing), color var(--transition-speed) var(--transition-timing); }
-.player-button:hover:not(:disabled) { background-color: var(--border-color); }
-body.dark-mode .player-button:hover:not(:disabled) { background-color: var(--secondary-bg-color); color: var(--primary-color); }
-.player-button:disabled { opacity: 0.5; cursor: not-allowed; }
-.player-button svg { width: 1.25rem; height: 1.25rem; }
-.time-display { font-size: 0.85em; color: var(--secondary-text-color); min-width: 2.8125rem; text-align: center; flex-shrink: 0; }
+/* Player Buttons (Play/Pause, Volume) */
+.player-button {
+    composes: btn-base; /* Inherit base button styles */
+    padding: 0.4rem; /* Slightly smaller padding for compact player buttons */
+    background: none;
+    border: none;
+    color: var(--secondary-text-color); /* Use secondary text color */
+}
+.player-button:hover:not(:disabled) {
+    background-color: var(--border-color); /* Subtle hover */
+    color: var(--primary-color);
+}
+body.dark-mode .player-button { color: var(--secondary-text-color); }
+body.dark-mode .player-button:hover:not(:disabled) {
+    background-color: var(--subtle-border-color);
+    color: var(--primary-color);
+}
+.player-button:disabled { opacity: 0.5; cursor: not-allowed; background: none; } /* Ensure no bg on disabled */
+.player-button svg { width: 1.125rem; height: 1.125rem; } /* Consistent icon size */
 
-.seek-bar-container { position: relative; flex-grow: 1; height: 0.875rem; display: flex; align-items: center; min-width: 5rem; margin: 0 0.25rem; }
-.seek-track, .seek-buffer-progress, .seek-played-progress { position: absolute; height: 0.375rem; top: 50%; transform: translateY(-50%); border-radius: 0.1875rem; pointer-events: none; }
+/* Time Display (Current Time / Duration) */
+.time-display {
+    font-size: 0.8125rem; /* 13px */
+    color: var(--secondary-text-color);
+    min-width: auto; /* Remove fixed min-width, let it flow */
+    padding: 0 0.25rem; /* Add some horizontal padding */
+    text-align: center;
+    flex-shrink: 0;
+    line-height: 1.5;
+}
+
+/* Seek Bar Styling */
+.seek-bar-container {
+    position: relative;
+    flex-grow: 1;
+    height: 1rem; /* Slightly taller for easier interaction */
+    display: flex;
+    align-items: center;
+    min-width: 6rem; /* Increased min-width */
+    margin: 0 0.5rem; /* More margin around seek bar */
+}
+.seek-track, .seek-buffer-progress, .seek-played-progress {
+    position: absolute;
+    height: 0.3125rem; /* 5px, slightly thicker track */
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: var(--radius-sm); /* Consistent radius */
+    pointer-events: none;
+}
 .seek-track { background-color: var(--seek-track-color); width: 100%; z-index: 1; }
 .seek-buffer-progress { background-color: var(--seek-buffer-color); width: 0%; z-index: 2; transition: width 0.1s linear; }
 .seek-played-progress { background-color: var(--seek-progress-color); width: 0%; z-index: 3; }
-#customSeekBar { position: relative; width: 100%; height: 100%; -webkit-appearance: none; appearance: none; background: transparent; cursor: pointer; z-index: 4; outline: none; margin: 0; padding: 0; }
-#customSeekBar::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0.875rem; height: 0.875rem; background: var(--seek-thumb-color); border-radius: 50%; cursor: pointer; box-shadow: var(--shadow-xs); margin-top: -0.25rem; }
-#customSeekBar::-moz-range-thumb { width: 0.875rem; height: 0.875rem; background: var(--seek-thumb-color); border-radius: 50%; cursor: pointer; border: none; box-shadow: var(--shadow-xs); }
-#customSeekBar:hover::-webkit-slider-thumb { background: var(--seek-thumb-hover-color); }
-#customSeekBar:hover::-moz-range-thumb { background: var(--seek-thumb-hover-color); }
-#customSeekBar:disabled::-webkit-slider-thumb { background: var(--seek-thumb-disabled-color); opacity: 0.5; }
-#customSeekBar:disabled::-moz-range-thumb { background: var(--seek-thumb-disabled-color); opacity: 0.5; }
-#customSeekBar:focus { outline: none; }
 
-.player-status-message { font-size: 0.8em; color: var(--secondary-text-color); margin-left: 0.5rem; flex-grow: 1; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; flex-shrink: 1; }
+#customSeekBar {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Fill the container for click area */
+    -webkit-appearance: none; appearance: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 4;
+    outline: none; margin: 0; padding: 0;
+}
+#customSeekBar::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 0.875rem; /* 14px thumb */
+    height: 0.875rem; /* 14px thumb */
+    background: var(--seek-thumb-color);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--shadow-xs);
+    margin-top: -0.28125rem; /* Adjust for new track height */
+    transition: background-color var(--transition-speed) var(--transition-timing), transform 0.1s ease-out;
+}
+#customSeekBar::-moz-range-thumb {
+    width: 0.875rem; height: 0.875rem;
+    background: var(--seek-thumb-color);
+    border-radius: 50%; cursor: pointer; border: none;
+    box-shadow: var(--shadow-xs);
+    transition: background-color var(--transition-speed) var(--transition-timing), transform 0.1s ease-out;
+}
+#customSeekBar:hover::-webkit-slider-thumb { background: var(--seek-thumb-hover-color); transform: scale(1.1); }
+#customSeekBar:hover::-moz-range-thumb { background: var(--seek-thumb-hover-color); transform: scale(1.1); }
+#customSeekBar:active::-webkit-slider-thumb { transform: scale(1.05); } /* Subtle active scale */
+#customSeekBar:active::-moz-range-thumb { transform: scale(1.05); }
+#customSeekBar:disabled::-webkit-slider-thumb { background: var(--seek-thumb-disabled-color); opacity: 0.6; transform: scale(1); }
+#customSeekBar:disabled::-moz-range-thumb { background: var(--seek-thumb-disabled-color); opacity: 0.6; transform: scale(1); }
+#customSeekBar:focus { outline: none; } /* Already there, good */
+#customSeekBar:focus-visible::-webkit-slider-thumb {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+#customSeekBar:focus-visible::-moz-range-thumb {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+
+/* Player Status Message */
+.player-status-message {
+    font-size: 0.75rem; /* 12px, slightly smaller */
+    color: var(--secondary-text-color);
+    margin-left: 0.6rem; /* More space */
+    flex-grow: 1; text-align: left;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    min-width: 0; flex-shrink: 1;
+    line-height: 1.4;
+}
 .player-status-message.error { color: var(--error-text-color); font-weight: 500; }
 body.dark-mode .player-status-message.error { color: var(--error-color); }
 
-.player-control-group { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
-.speed-control-group { margin-left: auto; }
-.speed-select { font-size: 0.8em; padding: 0.3rem 0.5rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background-color: var(--panel-bg-color); color: var(--text-color); cursor: pointer; transition: border-color var(--transition-speed) var(--transition-timing), background-color var(--transition-speed) var(--transition-timing); }
-body.dark-mode .speed-select { background-color: var(--secondary-bg-color); border-color: var(--subtle-border-color); }
-.speed-select:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 2px var(--primary-light-color); }
-.volume-slider { width: 4.375rem; height: 0.375rem; -webkit-appearance: none; appearance: none; background: var(--seek-track-color); border-radius: 0.1875rem; cursor: pointer; outline: none; }
-.volume-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0.75rem; height: 0.75rem; background: var(--seek-thumb-color); border-radius: 50%; cursor: pointer; transition: background-color var(--transition-speed) var(--transition-timing); }
-.volume-slider::-moz-range-thumb { width: 0.75rem; height: 0.75rem; background: var(--seek-thumb-color); border-radius: 50%; cursor: pointer; border: none; transition: background-color var(--transition-speed) var(--transition-timing); }
-.volume-slider:hover::-webkit-slider-thumb { background: var(--seek-thumb-hover-color); }
-.volume-slider:hover::-moz-range-thumb { background: var(--seek-thumb-hover-color); }
+/* Player Control Group (Volume, Speed) */
+.player-control-group { display: flex; align-items: center; gap: 0.4rem; flex-shrink: 0; }
+.speed-control-group { margin-left: auto; } /* Pushes speed to the right */
+
+/* Speed Select Dropdown */
+.speed-select {
+    font-size: 0.75rem; /* 12px */
+    padding: 0.25rem 0.4rem; /* Compact padding */
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color); /* Consistent with inputs */
+    color: var(--text-color);
+    cursor: pointer;
+    transition: border-color var(--transition-speed) var(--transition-timing), background-color var(--transition-speed) var(--transition-timing);
+    -webkit-appearance: none; /* Custom arrow might be needed for full consistency */
+    -moz-appearance: none;
+    appearance: none;
+    /* Add custom arrow or use a library if pixel-perfect consistency is needed */
+    padding-right: 1.5em; /* Space for custom arrow if added */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23718096'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* Basic SVG arrow */
+    background-repeat: no-repeat;
+    background-position: right 0.4rem center;
+    background-size: 1em;
+}
+body.dark-mode .speed-select {
+    background-color: var(--secondary-bg-color);
+    border-color: var(--border-color);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a0aec0'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* Dark mode arrow */
+}
+.speed-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-light-color);
+}
+
+/* Volume Slider */
+.volume-slider {
+    width: 5rem; /* Slightly wider */
+    height: 0.3125rem; /* Match seek bar track height */
+    -webkit-appearance: none; appearance: none;
+    background: var(--seek-track-color); /* Use seek track color */
+    border-radius: var(--radius-sm);
+    cursor: pointer; outline: none;
+}
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none;
+    width: 0.75rem; /* 12px thumb */
+    height: 0.75rem; /* 12px thumb */
+    background: var(--seek-thumb-color); /* Use seek thumb color */
+    border-radius: 50%; cursor: pointer;
+    transition: background-color var(--transition-speed) var(--transition-timing), transform 0.1s ease-out;
+    box-shadow: var(--shadow-xs);
+}
+.volume-slider::-moz-range-thumb {
+    width: 0.75rem; height: 0.75rem;
+    background: var(--seek-thumb-color);
+    border-radius: 50%; cursor: pointer; border: none;
+    transition: background-color var(--transition-speed) var(--transition-timing), transform 0.1s ease-out;
+    box-shadow: var(--shadow-xs);
+}
+.volume-slider:hover::-webkit-slider-thumb { background: var(--seek-thumb-hover-color); transform: scale(1.1); }
+.volume-slider:hover::-moz-range-thumb { background: var(--seek-thumb-hover-color); transform: scale(1.1); }
+.volume-slider:focus-visible::-webkit-slider-thumb {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+.volume-slider:focus-visible::-moz-range-thumb {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 #transcriptDisplayArea { order: 2; overflow-y: auto; min-height: 0; padding: 0; display: none; flex-grow: 0; }
 
